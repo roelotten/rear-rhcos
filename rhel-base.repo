@@ -1,0 +1,10 @@
+[alma-baseos]
+name=Almalinux Base OS Repository
+baseurl=https://almalinux.mirror.liteserver.nl/8.6/BaseOS/x86_64
+gpgcheck=0
+enabled=1
+[alma-appstream]
+name=Almalinux appstream Repository
+baseurl=https://almalinux.mirror.liteserver.nl/8.6/appstream/x86_64
+gpgcheck=0
+enabled=1
