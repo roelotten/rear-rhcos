@@ -6,7 +6,7 @@ ADD http://almalinux.mirror.liteserver.nl/8.6/BaseOS/x86_64/os/Packages/dhcp-cli
 ADD http://almalinux.mirror.liteserver.nl/8.6/BaseOS/x86_64/os/Packages/syslinux-6.04-5.el8.x86_64.rpm syslinux.rpm
 ADD rhel-base.repo /etc/yum.repos.d/rhel-base.repo
 RUN yum -y install httpd; yum clean all; systemctl enable httpd;
-RUN yum -y install rear.rpm parted.rpm xorriso.rpm dhcp-client.rpm syslinux.rpm;
+RUN yum -y install rear.rpm;
 RUN echo "Successful Web Server Test" > /var/www/html/index.html
 RUN rear mkbackup;
 RUN mkdir /etc/systemd/system/httpd.service.d/; echo -e '[Service]\nRestart=always' > /etc/systemd/system/httpd.service.d/httpd.conf
